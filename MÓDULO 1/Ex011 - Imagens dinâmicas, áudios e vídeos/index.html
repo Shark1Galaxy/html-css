@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Imagens dinâmicas</h1>
+            <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+            <picture>
+            <!--É nescessário que se tenha uma ordem para que o código funcione corretamente, como o caso a baixo: só seguir a ordem para qeu funcione.-->
+            <source media="(max-width: 730px)" srcset="Imagens/foto-p.png" type="image/png">
+            <source media="(max-width: 1030px)" srcset="Imagens/foto-m.png" type="image/png">
+            <img src="Imagens/foto-g.png" alt="imagem-g">
+        </picture>
+        </section>
+        <section>
+            <!--
+            🎵 Tag <audio> e seus principais atributos
+            Antes de ver o código, vamos entender os principais atributos da tag <audio>:
+            
+            🔹 preload
+            Define se o áudio será carregado antes da reprodução:
+            •	metadata → carrega apenas informações do arquivo (duração, tamanho, etc.)
+            •	none → não carrega nada até o usuário apertar play
+            •	auto (padrão) → carrega o áudio inteiro assim que a página é aberta
+
+            o recomendado é usar "metadata" para economizar banda e melhorar a performance da página.
+            
+            🔹 controls
+            Exibe os controles do player (play, pause, volume).
+            ⚠️ Sem esse atributo, o usuário não consegue interagir com o áudio.
+            
+            🔹 autoplay
+            Inicia a reprodução automaticamente ao carregar a página.
+            
+            🔹 loop
+            Faz o áudio reiniciar automaticamente ao chegar ao final.
+            -->
+            <h1>Reproduzindo audios em HTML5</h1>
+            <p>Reproduzindo áudios em HTML5 é muito fácil!</p>
+            <audio controls preload="metadata">
+                <source src="Midia/blownup.mp3" type="audio/mpeg"> <!--mp3 é o formato mais compatível com os navegadores-->
+                <source src="Midia/blownup.ogg" type="audio/ogg"> <!--ogg é um formato open source-->
+                <source src="Midia/blownup.wav" type="audio/wav"> <!--wav é um formato sem compressão, ou seja, ocupa mais espaço e muito pesado-->
+
+                <!--Na ordem, ele vai tentar primeiro executar o mp3, dps o ogg, dps o wav-->
+                <!--Caso ele não consiga, ele vai executar o <p>-->
+                <p>Infelizmente seu navegador não suporta o elemento de áudio. <a href="#" target="_blank" rel="external">Clique aqui para baixar o arquivo mp3</a></p>  
+            </audio>
+        </section>
+    </main>
+</body>
+</html>
