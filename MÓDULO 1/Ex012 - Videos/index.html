@@ -1,15 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video em HTML5</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <main>
+        <!--🎥 Tag <video>: mais atributos importantes
+        Além dos atributos básicos que você já viu, a tag <video> possui outros que valem a pena conhecer:
+        🔹 height
+        Define a altura do vídeo (normalmente usada junto com width).
+        <video width="600" height="340">
+        ________________________________________
+        🔹 loop
+        Reinicia o vídeo automaticamente ao terminar.
+        <video loop>
+        ________________________________________
+        🔹 muted
+        Deixa o vídeo sem som.
+        📌 Importante: navegadores modernos bloqueiam autoplay com áudio.
+        Para o autoplay funcionar, o vídeo geralmente precisa estar com muted.
+        <video autoplay muted>
+        ________________________________________
+        🔹 preload
+        Funciona de forma parecida com o áudio:
+        •	none → não carrega nada antes do play
+        •	metadata → carrega apenas informações básicas
+        •	auto → tenta carregar o máximo possível
+        <video preload="metadata">
+        ________________________________________
+        🔹 playsinline (mobile)
+        Evita que o vídeo abra em tela cheia automaticamente em celulares (especialmente no iOS).
+        <video playsinline>
+        -->
         <section>
-            
+            <h1>Inserido videos hospedados localmente</h1>
+            <p>Este video está hospedado no meu próprio servidor</p>
+            <h2>MP4/ OGV/ WEBM / MP4V</h2>
+            <video width="60%" controls poster="image/florthumb.png" preload="metadata"> <!--É do 1 pra baixo que começa a tentar reproduzir-->
+                <source src="Media/meuvideo.webm" type="video/webm">
+                <source src="Media/meuvideo.m4v" type="video/mp4">
+                <source src="Media/meuvideo.webm" type="video/webm">
+                <source src="Media/meuvideo.ogv" type="video/ogg">
+                <p>Seu navegador não te compatibilidade com reprodução de video</p>
+            </video>
+        </section>
+        <hr>
+        <section>
+            <h1>Videos hospedado fora do meu site (Youtube)</h1>
+            <p>Esse video está hospedado no youtube</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BzJxrkvp3GQ?si=rwP0yz7kFjpiun2B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <hr>
+        <section>
+            <h1>Videos hospedados fora do meu site (Vimeo)</h1>
+            <p>Videos upados no Vimeo</p>
+            <iframe src="https://player.vimeo.com/video/434009532?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Cristiano Ronaldo vs Lyon"></iframe>
         </section>
     </main>
 </body>
 </html>
+
