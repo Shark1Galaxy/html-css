@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+
+/*
+Em HTML é id = em CSS é #
+Em HTML é class = em CSS é . 
+*/
+
+body {
+    background-color: #d6fde9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: darkgreen;
+}
+
+h1#principal{ /*Aqui to dizendo que mesmo que o o h1, ele vem de cima pq ele é o principal, mas ele coloca pro cima do */
+    text-align: center;
+    background-color: #3c803c;
+    color: white;
+}
+
+h2 {
+    color: #3c805e;
+}
+/*Geralmente não colocamos o nome da tag antes da classe. e sim so a .classe*/
+.basico{
+    color: #3c805e;
+
+}
+.intermediario {
+    color: #80793c;
+}
+.avançado {
+    color: #803c3c ;
+}
+.destaque {
+    background-color: #c5c56070;
+}

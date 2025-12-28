@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo de Caixas</title>
+    <style>
+        h1{ /*Box-level*/
+            background-color: rgb(114, 114, 114);
+            /* Altura e largura do elemento */
+            height: 300px;
+            width: 300px;
+
+            /* -------------------------
+            BORDA (forma resumida)
+            Define largura, estilo e cor
+            ------------------------- */
+            border: 10px solid aquamarine;
+
+            /* -------------------------
+            BORDA (forma detalhada)
+            Essas três linhas fazem a MESMA coisa
+            que a linha acima, e sobrescrevem se vierem depois
+            ------------------------- */
+            border-width: 10px;
+            border-style: solid;
+            border-color: aquamarine;
+
+            /* Arredonda os cantos da borda */
+            /* Esse arredondamento é aplicado na borda */
+            border-radius: 20px;
+
+            /* -------------------------
+            PADDING (espaço interno)
+            Forma completa (4 lados)
+            ------------------------- */
+            padding: 10px 10px 10px 10px;
+
+            /* Forma resumida:
+            Top e Bottom = 20px
+            Right e Left = 30px
+            Essa linha SOBRESCREVE a anterior */
+            padding: 20px 30px;
+
+            /* Definição individual de cada lado
+            Essas linhas SOBRESCREVEM o padding anterior */
+            padding-top: 10px ;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            /* -------------------------
+            OUTLINE (fica fora da borda)
+            Não ocupa espaço no layout
+            ------------------------- */
+            outline: 1px dashed salmon;
+
+            /* Forma detalhada do outline
+            Essas linhas sobrescrevem a linha acima */
+            outline-width: 10px;
+            outline-style: dashed;
+            outline-color: salmon;
+
+            /* -------------------------
+            MARGIN (espaço externo)
+            Forma completa (4 lados)
+            ------------------------- */
+            margin: 10px 10px 10px 10px;
+
+            /* Forma resumida:
+            Top e Bottom = 20px
+            Right e Left = 30px
+            Essa linha SOBRESCREVE a anterior */
+            margin: 20px 30px; 
+
+            /* Centraliza verticalmente (top/bottom auto)
+            e mantém laterais com 10px
+            Normalmente usado em casos específicos */
+            margin: auto 10px auto 10px;
+
+            /* Definição individual de cada lado
+            Essas linhas SOBRESCREVEM as anteriores */
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+
+            /* Centraliza o elemento horizontalmente
+            (comentado, não está ativo) */
+            /* margin: auto; */
+        }
+        a{
+            /* -------------------------
+            BORDA DO LINK - Inline-Level
+            ------------------------- */
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+
+            /* -------------------------
+            PADDING DO LINK
+            Espaçamento interno em todos os lados
+            ------------------------- */
+            padding-top: 10px ;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level - h1 é box level</h1>
+    <p>Parágrafo também são exemplços de box-level,mas os <a href="#">links são exemplo de caixas inlevel</a> vamos ver como tudo isso funciona</p>
+</body>
+</html>

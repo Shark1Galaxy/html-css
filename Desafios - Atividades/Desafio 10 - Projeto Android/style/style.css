@@ -1,0 +1,115 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*Beba Nuves*/
+
+        @font-face {
+            font-family: 'Android';
+            src: url('../fontes/idroid.otf') format(opentype);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    --colorback: #E8E6C2;
+    --colorarticle: white;
+    --colorfooter: black;
+    --colorbase1: #208A50;
+    --colorbase2: #043D1C;
+    --fontTitule: Bebas Neue, sans-serif;
+    --fontTituloPrincial: Android, sans-serif;
+    --sectionMore: #7FE1A8;
+}
+body{
+    background-color: var(--colorback);
+}
+header{
+    text-align: center;
+    background-image: linear-gradient(to bottom, var(--colorbase1), var(--colorbase2));
+}
+header {
+    color: white;
+    padding-top: 40px;
+}
+header h1 {
+    font-size: 2.5em;
+    font-family: var(--fontTitule);
+    text-shadow: 2px 2px #000000;
+}
+header > p {
+    text-align: center;
+    font-size: 1.3em;
+}
+header > h1 , header > p{
+    margin-bottom: 20px;
+}
+nav, nav > a{
+    color: white;
+    font-weight: bold;
+    text-align: justify;
+    text-decoration: none;
+    padding: 20px;
+}
+
+/*Conteudo*/
+
+main{
+    margin: auto;
+    width: 60vw;
+    background-color: var(--colorarticle);
+    padding: 30px;
+}
+article > picture img#bugdroid {
+    display: block;
+    margin: auto;
+    width: 25vw;
+}
+article h1, h2, p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+article p {
+    font-size: 1.1em;
+}
+img{
+    margin: auto;
+    width: 100%;
+}
+main > section#artigo1 > article h1 {
+    font-family: var(--fontTituloPrincial) ;
+}
+article > picture#foto {
+    display: block;
+}
+
+#video {
+    display: flex;
+    background-color: var(--colorbase2);
+    justify-content: center;
+    padding: 10%;
+    margin-bottom: 20px;
+    
+}
+article#more h1 {
+    background-color: var(--colorbase2);
+    color: white;
+    padding: 10px 10px 10px 10px;
+}
+section p#done {
+    margin-top: 20px;
+    text-align: center;
+}
+article#more {
+    background-color: var(--sectionMore);
+    padding: 10px;
+}
+footer{
+    background-color: var(--colorfooter);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
