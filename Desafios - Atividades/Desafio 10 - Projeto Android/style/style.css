@@ -18,8 +18,11 @@
     --colorback: #E8E6C2;
     --colorarticle: white;
     --colorfooter: black;
-    --colorbase1: #208A50;
-    --colorbase2: #043D1C;
+    --colorbase1: #C5EBD6;
+    --colorbase2: #83E1AD;
+    --colorbase3: #3DDC84;
+    --colorbase4: #2FA866;
+    --colorbase5: #063D1E;
     --fontTitule: Bebas Neue, sans-serif;
     --fontTituloPrincial: Android, sans-serif;
     --sectionMore: #7FE1A8;
@@ -29,87 +32,154 @@ body{
 }
 header{
     text-align: center;
-    background-image: linear-gradient(to bottom, var(--colorbase1), var(--colorbase2));
+    background-image: linear-gradient(to bottom, var(--colorbase4), var(--colorbase5));
 }
 header {
     color: white;
     padding-top: 40px;
 }
-header h1 {
+header h1{
     font-size: 2.5em;
     font-family: var(--fontTitule);
-    text-shadow: 2px 2px #000000;
+    
 }
 header > p {
     text-align: center;
     font-size: 1.3em;
+    text-shadow: 2px 2px #000000;
 }
 header > h1 , header > p{
     margin-bottom: 20px;
 }
 nav, nav > a{
-    color: white;
-    font-weight: bold;
+    color: var(--colorbase2);
     text-align: justify;
     text-decoration: none;
     padding: 20px;
+    transition: all 0.3s ease; /*Para animar o hover*/
+}
+nav > a:hover {
+    background-color: var(--colorbase2);
+    border-radius: 10px;
+    color: white;
+}
+nav > a:active{
+    background-color: var(--colorbase4);
+    color: black;
 }
 
 /*Conteudo*/
 
 main{
     margin: auto;
-    width: 60vw;
+    margin-bottom: 30px;
+    border-radius: 0px 0px 20px 20px;
     background-color: var(--colorarticle);
     padding: 30px;
+    max-width: 60%;
+    box-shadow: 0px 0px 8px 2px #0000003b;
 }
-article > picture img#bugdroid {
-    display: block;
-    margin: auto;
-    width: 25vw;
+main h1 , h2{
+    font-weight: normal;
+    font-family: var(--fontTituloPrincial) ;
 }
-article h1, h2, p {
+main h1 {
+    color: var(--colorbase5);
+}
+main h1, h2, p {
     margin-bottom: 15px;
     text-align: justify;
 }
-article p {
-    font-size: 1.1em;
+main h2 {
+    font-size: 1.4em;
+    background-image: linear-gradient(to left, transparent, var(--colorbase3));
+    padding: 6px;
+    color: #208A50;
+}
+main p {
+    font-size: 1em;
+    line-height: 2em;
+    text-indent: 30px; /*Da uma distacia no começo do texto*/
+
+}
+main strong {
+    color: var(--colorbase4);
+}
+main strong a {
+    padding: 4px;
+    background-color: var(--colorbase2);
+    text-decoration: none;
+    color: var(--colorbase5);
+    border-radius: 5px;
+    font-weight: bold;
+}
+main strong a:hover{
+    background-color: var(--colorbase3);
+    color: var(--colorbase1);
+    content: '\1F517';
+}
+main strong a::after {
+    content: '\1F517';
 }
 img{
     margin: auto;
     width: 100%;
 }
-main > section#artigo1 > article h1 {
-    font-family: var(--fontTituloPrincial) ;
-}
-article > picture#foto {
-    display: block;
+article > picture img#bugdroid {
+    display: block; 
+    margin: auto;
+    max-width: 350px;
 }
 
-#video {
-    display: flex;
-    background-color: var(--colorbase2);
-    justify-content: center;
-    padding: 10%;
-    margin-bottom: 20px;
-    
+section#video {
+    background-color: var(--colorbase5);
+    margin: 0px -30px 30px -30px;
+    padding: 20px;
+    padding-bottom: 58.1%;
+    position: relative;
+
 }
-article#more h1 {
-    background-color: var(--colorbase2);
+section#video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+aside{
+    background-color:var(--colorbase2);
+    padding: 20px;
+    border-radius: 10px;
+}
+aside h3 {
+    background-color: var(--colorbase5);
     color: white;
-    padding: 10px 10px 10px 10px;
-}
-section p#done {
-    margin-top: 20px;
-    text-align: center;
-}
-article#more {
-    background-color: var(--sectionMore);
     padding: 10px;
+    margin: -20px -20px 0px -20px; /*Para tirar as bordas do aside*/
+    border-radius: 10px 10px 0 0px; /*Deixar as de cima redondas*/
 }
+aside > ul {
+    list-style-type: '\2714\00A0\00A0'; /*Aqui to colocando o sinal de check de emojiM NÃO É COMPATIVO COM TODO TIPO DE NAVEGADOR ISSO*/
+    list-style-position: inside;
+    columns: 2;
+}
+p#done {
+    margin-top: 20px;
+}
+
 footer{
     background-color: var(--colorfooter);
     color: white;
     text-align: center;
     padding: 10px;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+footer a:hover {
+    color: var(--colorbase1);
 }
