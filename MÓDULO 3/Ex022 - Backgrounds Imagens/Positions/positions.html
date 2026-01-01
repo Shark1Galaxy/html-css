@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento Vertical</title>
+    <style>
+        #container {
+            background-image: url('../imagens/target001.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%; /*Ele fica 100% vertical e 100% hoizontal*/
+            position: relative; /*Ele ja é realtive como padrão, nem precisa por, mas é mas pra ver e tal*/
+            height: 96vh;
+            padding: 10px;
+            background-color: purple;
+        }
+        #conteudo {
+            position: absolute; /**/
+            background-size: 100% 100%;
+            height: 300px;
+            width: 400px;
+            background-color: yellow;
+            background-image: url('../imagens/target001.png');
+
+            /*Essa centralização ela considerar a partir da ponta esquerda superior do amarelo
+
+            Permite posicionar o elemento usando top, left, right e bottom.
+            */
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+            /*Ele ta dizendo, ele vai chegar 20px, pra direita e 20px para baixo
+            Move o canto superior esquerdo do elemento para o centro do container.
+
+            
+            com o podemso centralizar?
+            simples, é so inverter os valores do left de 50% para -50% e o de top de 50% para -50% também, eu to dizendo. faça ele ir -50% pra esquerda e -50% pra cima
+
+            Ou seja, Move o próprio elemento metade da sua largura para a esquerda
+            e metade da sua altura para cima, centralizando de verdade.
+            */
+
+        }
+    </style>
+</head>
+<body>
+    <main id="container">
+        <section id="conteudo">
+        </section>
+    </main>
+</body>
+</html>

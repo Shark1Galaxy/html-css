@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo fixo de tela</title>
+    <style>
+        body{
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
+
+            /*
+            Forma longa (equivalente ao shorthand acima):
+
+            height: 100vh;
+            background-color: black;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover; /* auto é o valor padrão */
+           /*background-attachment: fixed; scroll é o padrão */
+
+            /* Observação sobre shorthand */
+
+            /*
+            Ordem correta do shorthand background:
+            color > image > position > repeat > attachment
+
+            Obs: background-size não funciona direto no shorthand tradicional,
+            ele deve ser declarado separado ou usando position/size.
+            */
+
+            /* background-size */
+
+            /*
+            auto:
+            Valor padrão. Mantém o tamanho original da imagem.
+            Pode sobrar espaço ou a imagem pode ultrapassar o elemento.
+
+            contain:
+            Ajusta a imagem para aparecer inteira dentro do elemento.
+            Não corta a imagem, mas pode sobrar espaço em branco.
+
+            cover:
+            A imagem cobre todo o elemento.
+            Não sobra espaço, porém partes da imagem podem ser cortadas.
+            */
+
+        
+        }
+        main {
+            background-color: white;
+            max-width: 400px;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid black;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de imagem de fundo</h1>
+        <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vero corporis dolorem consequatur recusandae aliquid, doloribus voluptatem suscipit nostrum aut id facilis porro, atque repellat sapiente obcaecati maiores illum aperiam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus odit libero architecto tenetur sit quisquam officia similique id! Est delectus aspernatur excepturi nam iste quasi incidunt possimus nulla, in molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam natus amet fugit distinctio obcaecati. Odit unde perferendis temporibus porro soluta. Aliquid consequatur ipsa nihil molestiae! Explicabo reiciendis facilis magni numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo expedita veritatis quis deleniti deserunt ex, veniam sint minima numquam error inventore accusamus maxime fugiat laudantium a quisquam saepe? Sunt, non! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vero corporis dolorem consequatur recusandae aliquid, doloribus voluptatem suscipit nostrum aut id facilis porro, atque repellat sapiente obcaecati maiores illum aperiam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus odit libero architecto tenetur sit quisquam officia similique id! Est delectus aspernatur excepturi nam iste quasi incidunt possimus nulla, in molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam natus amet fugit distinctio obcaecati. Odit unde perferendis temporibus porro soluta. Aliquid consequatur ipsa nihil molestiae! Explicabo reiciendis facilis magni numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo expedita veritatis quis deleniti deserunt ex, veniam sint minima numquam error inventore accusamus maxime fugiat laudantium a quisquam saepe? Sunt, non! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vero corporis dolorem consequatur recusandae aliquid, doloribus voluptatem suscipit nostrum aut id facilis porro, atque repellat sapiente obcaecati maiores illum aperiam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus odit libero architecto tenetur sit quisquam officia similique id! Est delectus aspernatur excepturi nam iste quasi incidunt possimus nulla, in molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam natus amet fugit distinctio obcaecati. Odit unde perferendis temporibus porro soluta. Aliquid consequatur ipsa nihil molestiae! Explicabo reiciendis facilis magni numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo expedita veritatis quis deleniti deserunt ex, veniam sint minima numquam error inventore accusamus maxime fugiat laudantium a quisquam saepe? Sunt, non! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vero corporis dolorem consequatur recusandae aliquid, doloribus voluptatem suscipit nostrum aut id facilis porro, atque repellat sapiente obcaecati maiores illum aperiam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus odit libero architecto tenetur sit quisquam officia similique id! Est delectus aspernatur excepturi nam iste quasi incidunt possimus nulla, in molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam natus amet fugit distinctio obcaecati. Odit unde perferendis temporibus porro soluta. Aliquid consequatur ipsa nihil molestiae!</p>
+    </main>
+</body>
+</html>

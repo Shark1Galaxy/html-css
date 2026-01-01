@@ -1,0 +1,14 @@
+h1 {
+    position: static; /*Esse é o padrão*/
+   
+}
+
+body {
+    min-height: 150vh;
+}
+h1{
+    position: relative; /*Ele passa por cima dos outros elementos*/
+    top: 40px;
+    left: 40px;
+    background-color: blue;
+}

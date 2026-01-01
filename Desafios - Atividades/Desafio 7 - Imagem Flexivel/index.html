@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Responsiva</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Iamgem Flexivel</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur a eum molestiae voluptatem reprehenderit ut accusamus voluptates, eaque eos, cupiditate quo soluta ullam dolore minima iusto, porro minus et sint.</p>
+            <picture>
+                <source media="(max-width: 758px)" srcset="imagem/paisagem-p.png" type="image/png">
+                <source media="(max-width: 1246px)" srcset="imagem/paisagem-m.png" type="image/png">
+                <img src="imagem/paisagem-g.png" alt="paisagme">
+            </picture>
+        </section>
+    </main>
+</body>
+</html>
