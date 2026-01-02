@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Grande</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(90, 90, 90);
+        }
+        caption{
+            padding: 10px;
+            border: 1px solid black;
+            background-color: lightgray;
+            font: bold 1.2em Arial, Helvetica, sans-serif;
+        }
+        tbody > tr:nth-child(even){ /*2n -1*/
+            background-color: #d9ff00;
+        }
+        tbody > tr:nth-child(odd){ /*2n*/
+            /*2n, ou sla 3n, significa que a cada 2 linhas e aplicado o estilo
+
+            Mas também podemos usar o odd que é ímpar e o even que é par
+
+            odd = ímpar
+            even = par
+
+            */
+            background-color: lightgray
+        }
+        thead, tfoot{
+            background-color: rgb(90, 90, 90);
+            color: #ffffff;
+        }
+        td.numero-populacao{
+            text-align: right;
+        }
+    </style>
+</head>
+<body onload="dadosOn()">
+    <h1 style="font-weight: bold;">Uso de Tabelas Grandes</h1>
+    <!--
+    Anatomia para tabelas grandes
+    table
+        Caption
+        THEAD
+            tr > td > th
+        TBODY
+            tr > td > th
+        TFOOT
+            tr > td > th
+    -->
+    <table>
+        <caption>População dos Estados Brasileiros - 2024</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 15%;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero-populacao">46.081.801</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero-populacao">21.393.441</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero-populacao">17.223.547</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="numero-populacao">14.930.634</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="numero-populacao">11.516.840</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="numero-populacao">12.422.973</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="numero-populacao">7.338.473</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="numero-populacao">9.187.103</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="numero-populacao">9.674.793</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="numero-populacao">4.059.905</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="numero-populacao">906.876</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="numero-populacao">1.590.248</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="numero-populacao">652.713</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="numero-populacao">877.613</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="numero-populacao">3.094.325</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="numero-populacao">1.815.278</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="numero-populacao">3.351.543</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="numero-populacao">3.281.480</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="numero-populacao">3.526.220</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="numero-populacao">2.809.394</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="numero-populacao">2.318.822</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="numero-populacao">7.113.540</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="numero-populacao">4.018.650</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="numero-populacao">3.534.165</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="numero-populacao">4.207.714</td>
+            </tr>
+            <tr>
+                <td>Para</td>
+                <td class="numero-populacao">8.690.745</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="numero-populacao">22.27.613</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th scope="row">Total de habitantes</th>
+            <th id="dados-populacao"></th>
+        </tfoot>
+    </table>
+    <script>
+        const dadosPopulacao = document.getElementById('dados-populacao');
+        const numerValue = document.getElementById('numero-populacao');
+
+        let soma = 0;
+        function dadosOn(){
+            for(let i = 0; i < document.querySelectorAll('.numero-populacao').length; i++){
+                let valorAtual = parseInt(document.querySelectorAll('.numero-populacao')[i].innerText.replace(/\./g, ''));
+                soma += valorAtual;
+            }
+            dadosPopulacao.innerText = soma.toLocaleString('pt-BR');
+        }
+    </script>
+</body> 
+</html>
