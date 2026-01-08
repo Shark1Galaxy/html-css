@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Meu primeiro formulário</h1>
+        </header>
+        <section>
+            <!--Name para html e php,node js, back endn o geral e id- para js-->
+            <form method="POST" action="cadastro.php" autocomplete="off"> <!--Como padrão ele da GET-->
+                <label for="nome">Nome:</label> 
+                    <input type="text" name="nome" id="nome">
+                <label for="sobrenome">Sobrenome: </label>
+                    <input type="text" name="sobrenome" id="sobrenome">
+                    <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+</body>
+</html>

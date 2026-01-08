@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Formulários</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Tipos de formulários</h1>
+        </header>
+        <form action="cadastro.php" method="POST" autocomplete="off">
+
+        <div id="usuario">
+            <label for="usuario">Usuário:</label>
+            <input type="text" name="usuario" id="usuario" required minlength="5" maxlength="15"" size="10" placeholder="Escreva o seu nome!"
+            autocomplete="username"
+            >
+            <!--
+            O atributo "size" define a largura visível do campo de texto,
+            indicando aproximadamente quantos caracteres podem ser exibidos.
+            O atributo "placeholder" exibe um texto de dica dentro do campo,
+            orientando o usuário sobre o que deve ser digitado.
+            -->
+        </div>
+        <div id="senha">
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha" required maxlength="8" size="8" placeholder="minimo 8 letras" autocomplete="current-password">
+        </div>
+        <!--
+        O atributo "autocomplete" pode receber valores específicos, como
+        "username", "current-password" e "new-password", permitindo que
+        o navegador identifique o tipo de dado solicitado.
+        Isso torna o preenchimento mais rápido, seguro e padronizado,
+        especialmente em formulários de login e cadastro.
+        -->
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Resetar">
+        </form>
+    </main>
+</body>
+</html>

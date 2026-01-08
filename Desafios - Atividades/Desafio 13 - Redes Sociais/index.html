@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociais</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: content-box;
+        }
+        body {
+            position: relative;
+            background-image: url('imagens/fundo-madeira.jpg');
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+
+        }
+        div#iphone { 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        iframe{
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 199px;
+            height: 352px;
+        }
+        img{
+            width: 230px;
+        }
+        header{
+            margin-top: 10px;
+        }
+        header > ul > li img{
+            width: 30px;
+            border-radius: 20px;
+            box-shadow: 2px 1px 1px black;
+            transition: all 0.3s ease-in-out;
+        }
+        header > ul li{
+            list-style: none;
+            text-align: right;
+            padding: 5px;
+        }
+        header > ul > li img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <ul>
+                <li><a href="pages/initial.html" target="initial"><img src="imagens/logo-home.jpg" alt="logo-home" ></a></li>
+                <li><a href="pages/youtube.html" target="initial"><img src="imagens/logo-youtube.jpg" alt=""></a></li>
+                <li><a href="pages/github.html" target="initial"><img src="imagens/logo-github.jpg" alt=""></a></li>
+                <li><a href="pages/instagram.html" target="initial"><img src="imagens/logo-instagram.jpg" alt=""></a></li>
+                <li><a href="pages/twitter.html" target="initial"><img src="imagens/logo-twitter.jpg" alt=""></a></li>
+                <li><a href="pages/facebook.html" target="initial"><img src="imagens/logo-facebook.jpg" alt=""></a></li>
+            </ul>
+        </header>
+        <div id="iphone">
+            <iframe src="pages/initial.html" name="initial" frameborder="0" sandbox="sandbox" referrerpolicy="no-referrer"></iframe>
+        <img src="imagens/frame-iphone.png" alt="iphone-frame">
+        </div>
+    </main>
+</body>
+</html>
