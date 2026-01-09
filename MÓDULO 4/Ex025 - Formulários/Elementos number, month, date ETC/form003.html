@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula sobre forms</title>
+  </head>
+  <body>
+    <main>
+      <h1>Texte de formulário</h1>
+      <form action="../cadastro.php" method="POST" autocomplete="on">
+        <div id="fristname" class="names">
+          <label for="inome"> Nome: </label>
+          <input
+            type="text"
+            name="nome"
+            id="inome"
+            required
+            maxlength="15"
+            placeholder="Digite seu nome completo"
+            autocomplete="usarname"
+          />
+        </div>
+        <div id="media" class="names">
+          <label for="imedia">Média: </label>
+          <input
+            type="number"
+            name="media"
+            id="imedia"
+            min="0"
+            max="10"
+            step="0.1"
+            required
+            placeholder="Digite sua média"
+            autocomplete=""
+            
+          />
+          <!-- autocomplete: informa ao navegador que tipo de dado o input recebe -->
+          <!-- Exemplos comuns: -->
+          <!-- name            → nome da pessoa -->
+          <!-- username        → nome de usuário -->
+          <!-- email           → e-mail -->
+          <!-- password        → senha -->
+          <!-- current-password→ senha atual -->
+          <!-- new-password    → nova senha -->
+          <!-- tel             → telefone -->
+          <!-- url             → endereço de site -->
+          <!-- address-line1   → endereço (rua, número) -->
+          <!-- address-line2   → complemento -->
+          <!-- postal-code     → CEP -->
+          <!-- country         → país -->
+          <!-- organization   → empresa -->
+          <!-- off             → desativa o autocomplete -->
+
+          <!--Ele serve para ajudar o navegador a preencher o campo automaticamente com dados que o usuário já digitou antes (como nome, email, senha, endereço etc.).
+          Com o autocomplete, o navegador:
+
+          Sugere informações salvas pelo usuário
+
+          Deixa o preenchimento mais rápido e fácil
+
+          Reduz erros de digitação
+
+          Melhora a experiência do usuário
+
+          Exemplo simples:
+          Se você usar autocomplete="email", o navegador pode sugerir o e-mail do próprio usuário automaticamente.
+          -->
+
+          <!-- Os atributos min e max definem os valores mínimo e máximo permitidos no campo numérico.
+              Por exemplo, min="0" e max="10" permitem apenas valores entre 0 e 10. -->
+
+          <!-- O atributo step define de quanto em quanto o valor pode variar.
+              Por exemplo, step="0.1" permite valores decimais como 6.5. -->
+
+        </div>
+        <div>
+          <label for="iletivo">Mês: </label>
+          <input
+            type="month"
+            name="letivo"
+            id="iletivo"
+            value="2025-08"
+            required
+          />
+          <!-- min: define o valor mínimo permitido da caixa do input -->
+          <!-- max: define o valor máximo permitido da caixa do input -->
+          <!-- o step define o intervalo de variação do valor do input, sendo usado principalmente em campos numéricos para controlar de quanto em quanto o valor pode aumentar ou diminuir.
+          ➡️ Nesse caso, os valores válidos seriam: 0.5, 0.6, 0.7... 
+          -->
+          <!-- required: torna o preenchimento obrigatório -->
+          <!-- value: define o valor inicial do input do que já vai vim! OBS(ele cancela o planceholder automaticamente) -->
+        </div>
+        <div id="day">
+          <label for="iday">Dia da Prova: </label>
+          <input type="date" name="day" id="iday" value="2025-08-13" required />
+        </div>
+        <div id="hour">
+          <label for="horario">Hórario da prova</label>
+          <input type="time" name="time" id="horario" required />
+        </div>
+        <br />
+        <div id="buttons" class="buttonsnames">
+          <input type="submit" value="ENVIAR" />
+          <input type="reset" value="Limpar" />
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
