@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Exemplo de Formulários</h1>
+    </header>
+    <main>
+        <section>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <div class="estado">
+                    <label for="estados">Estados:</label>
+                    <select name="estado" id="estados">
+
+                        <option value="" selected>---Escolha---</option>
+                        <optgroup label="Reigão Sudeste"> <!--É usado para separar em grupos -->
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <!--Aqui para deixar como padrão, uamos o selected-->
+                        </optgroup>
+                        
+                        <optgroup label="Região Nordeste"> <!--É usado para separar em grupos -->
+                            <option value="MA">Maranhão</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="RN">Rio grande do norte</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div id="profissao">
+                    <label for="profissao">Profissão</label>
+                    <input type="text" name="profision" id="profissao" list="lista-profissao">
+
+                    <datalist id="lista-profissao"> <!--Serve para por a lista mesmo so que dentro do input-->
+                        <option>Administração</option>
+                        <option>Contabilista</option>
+                        <option>Professor</option>
+                        <option>Desenvolvedor</option>
+                    </datalist>
+                </div>
+                <div id="mensagem">
+                    <label for="mensagem">Mensagem: </label> <br>
+                    <textarea name="messenger" id="mensagem" cols="30" rows="10">
+                        sua mensagems
+                    </textarea> <!--Quanto for usar o textarea precisa ter post tbm, tendo em vista que o get tem um limite de caracteres-->
+                </div>
+
+                <div id="button">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

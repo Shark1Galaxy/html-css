@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Output com Range</title>
+</head>
+<body>
+    <header>
+        <h1>Exemplo de Formulario Output com Range</h1>
+    </header>
+    <main>
+        <form action="cadastro.php" method="get">
+            <div id="range">
+                <label for="level">Nivel:</label>
+                <input type="range" name="nivel" id="level" min="0" max="10" value="5" oninput="valor.innerHTML = Number(level.value)">
+                <output id="valor">5</output>
+                <!--Aqui é pra mostrar o valor de range em tempo real -->
+            </div>
+        </form>
+    </main>
+</body>
+</html>

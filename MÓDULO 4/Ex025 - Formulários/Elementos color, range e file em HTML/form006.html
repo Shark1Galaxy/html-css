@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Exemplo de Formulários</h1>
+    </header>
+    <main>
+        <section>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <div id="color">
+                    <label for="cor">Cor:</label>
+                    <input type="color" name="cores" id="color" value="#00ff00" required>
+                    <!--Value aqui serve pra por um padrão de cor-->
+                </div>
+                <div id="nivel">
+                    <label for="nivel">Nivel de satisfação</label>
+                    <input type="range" name="level" id="nivel" min="1" max="5" value="1">
+                    <!--Min e max ele é usado nesse caso para mudar o nivel de até onde ele vai de 0 a 5 por exemplo. o value é para decretar um padrão tbm-->
+                </div>
+                <div id="anexar-coisas">
+                    <label for="file">Foto de perfil: </label>
+                    <input type="file" name="arquivo" id="file"> <!--Sempre que for usar o input file, é melhor e recomendando usar o metodo post-->
+                </div>
+                <div id="button">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

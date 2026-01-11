@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Output com Range</title>
+</head>
+<body>
+    <header>
+        <h1>Exemplo de Formulario Output com Range</h1>
+    </header>
+    <main>
+        <form action="cadastro.php" method="get">
+            <div id="ano">
+                <label for="ano">Em que ano você nasceu?</label>
+                <input type="number" name="idade" id="ano" maxlength="50" oninput="calculaAno()"><br>
+                <div id="resultado">
+                    Sua idade é: 
+                    <output id="valor">0</output>
+                </div>
+            </div>
+            <div id="button">
+                <input type="submit" value="Enviar">
+            </div>
+    </main>
+    <script>
+        const recebeDados = document.querySelector('input#ano')
+        function calculaAno(){
+            const agora = new Date().getFullYear();
+            valor.innerHTML = agora - Number(recebeDados.value)
+        }
+    </script>
+</body>
+</html>

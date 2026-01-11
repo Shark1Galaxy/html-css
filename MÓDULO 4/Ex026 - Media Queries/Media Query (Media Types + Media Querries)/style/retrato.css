@@ -1,0 +1,10 @@
+@charset 'UTF-8';
+
+/*Configurações em PÉ (MODO portrait)*/
+
+body{
+    background-image: url(../image/cev-portrait.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
