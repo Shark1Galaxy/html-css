@@ -1,0 +1,71 @@
+@charset 'UTF-8';
+
+/*Pesquisar sobre Typical Devices breakpoints
+--------------------------
+Pequenas Telas: até 600px
+Celular: 600px até 768px
+Tablet: 768 px até 992px
+Desktop: 992px até 1200px
+TV: ATÉ 1200px
+*/
+
+/*Todas as demais midias*/
+
+@media print{
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        color: rgb(95, 95, 95);
+    }
+    img#iphone{
+        display: none;
+    }
+    img#impressora{
+        display: block;
+    }
+    main{
+        border: 2px solid black;
+    }
+    main::after{
+        content: 'impressão feita atravez de impressora';
+    }
+}
+
+/*Para tablets*/
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    body{
+        background-image: url('../imagens/back-tablet.jpg');
+        
+    }
+    img#iphone{
+        display: none;
+    }
+    img#tablet{
+        display: block;
+    }
+}
+/*Para desktops*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    body{
+        background-image: url('../imagens/back-pc.jpg');
+        background-size: cover;
+    }
+    img#iphone{
+        display: none;
+    }
+    img#notebook{
+        display: block;
+    }
+}
+
+/*Para tv e dispositivos maiores*/
+@media only screen and (min-width: 1200px) {
+    body{
+        background-image: url('../imagens/back-tv.jpg');
+    }
+    img#iphone{
+        display: none;
+    }
+    img#tv{
+        display: block;
+    }
+}
