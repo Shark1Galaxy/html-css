@@ -1,0 +1,53 @@
+@charset 'UTF-8';
+
+/*
+Extra Small (Mobile): ~320px - 575px (Older phones, small devices).
+Small (Large Phones/Small Tablets): ~576px - 767px (Landscape phones, small tablets).
+Medium (Tablets): ~768px - 991px (Portrait tablets).
+Large (Laptops/Desktops): ~992px - 1199px (Small desktops, laptops).
+Extra Large (Desktops): ~1200px - 1399px (Standard monitors).
+Extra Extra Large (Large Screens): 1400px+ (Large monitors, TVs). 
+*/
+
+/*Telas pequenas*/
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    body{
+        background-image: linear-gradient(top top, #4D59FA,  #4a7cf0);
+        
+    }
+    section{
+       width: 70vw;
+       
+    }
+    section > div#imagem{
+        float: left;
+        width: 30%;
+        height: 100%;
+        
+    }
+    section > div#fomulario{
+        float: right;
+        width: 70%;
+    }
+}
+
+/*Telas grandes*/
+@media only screen and (min-width: 992px) {
+    body{
+        background-image: linear-gradient(to top, #58ACF5, #43BCE0);
+    }
+    section{
+        width: 90vw;
+    }
+    section > div#imagem{
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+    div#formulario > h1 {
+        font-size: 2em;
+    }
+    div#formulario > p {
+        font-size: 1.2em;
+    }
+}

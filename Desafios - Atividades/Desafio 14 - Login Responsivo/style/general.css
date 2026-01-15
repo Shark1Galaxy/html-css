@@ -1,0 +1,62 @@
+@charset 'UTF-8';
+
+:root {
+    --corBase1: #4D59FA;
+    --corBase2: #4573DE;
+    --corBase3: #58ACF5;
+    --corBase4: #43BCE0;
+    --corBase5: #4DFAFA;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    background-color: var(--corBase2);
+    height: 100vh;
+    width: 100vw;
+}
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+section{
+    position: absolute;
+    overflow: hidden; /*Tira as bordas da imagem de fundo do div#imagem*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.199);
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
+}
+section > div#imagem{
+    display: block;
+   background: var(--corBase2) url('../image/predio.jpg') center center;
+   height: 200px;
+   width: 100%;
+   background-size: cover;
+}
+section > div#formulario{
+    display: block;
+    padding: 10px;
+}
+
+div#formulario > h1 {
+   text-align: center;
+   margin-bottom: 10px;
+}
+div#formulario > p {
+    font-size: 0.8em;
+}
+form > input[type=submit]{
+    display: block;
+}
