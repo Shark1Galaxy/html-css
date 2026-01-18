@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-direction</title>
+    <style>
+        section#container{ /*Pai container 1*/
+            display: flex;
+            background-color: lightsalmon;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+        section#container2 { /*Pai container 2*/
+            display: flex;
+            background-color: lightsalmon;
+            flex-direction: row-reverse;
+        }
+        section#container3 { /*Pai container 3*/
+            display: flex;
+            background-color: lightsalmon;
+            flex-direction: column;
+        }
+        section#container4 { /*Pai container 4*/
+            display: flex;
+            background-color: lightsalmon;
+            flex-direction: column-reverse;
+        }
+        div.item{ /*Todos os itens A à G*/
+            background-color: rgb(0, 191, 255);
+            border: 1px solid black;
+            text-align: center;
+            padding: 30px;
+        }
+        hr{
+            border: 1px solid black;
+        }
+        img {
+            display: block;
+            max-width: 80%;
+            margin: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Flex direction: row (em linha) PADRÃO</h1>
+        <section id="container">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </section>
+        <img src="imagens/row.png">
+        <hr>
+ <h2>Flex direction: row-reverse (em linha, mas reverso)</h2>
+        <section id="container2">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+</section>
+        <img src="imagens/row-reverse.png">
+        <hr>
+<h1>Flex direction: collum (em coluna)</h1>
+        <section id="container3">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </section>
+        <img src="imagens/collum.png">
+        <h1>Flex direction: collum-reverse (em coluna-reversa)</h1>
+        <section id="container4">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </section>
+        <img src="imagens/collum-reverse.png" alt="">
+        <br>
+        <h1>Imagem</h1>
+        <img src="imagens/flexbox.png" alt="" width="100%">
+    </main>
+</body>
+</html>

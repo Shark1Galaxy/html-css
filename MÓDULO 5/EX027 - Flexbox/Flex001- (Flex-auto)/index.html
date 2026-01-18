@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX: AUTO</title>
+    <style>
+        section#container { /*Pai*/
+            display: flex;
+            background-color: white;
+        }
+        div.item{ /*Filho não se da display:flex*/
+            background-color: rgb(0, 191, 255);
+            border: 1px solid black;
+            flex: auto; /*Flex auto, faz com que os filhos se adapatem ao container pai */
+            text-align: center; /*Centralizar os elementos*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </section>
+        <img src="Captura de tela 2025-09-11 143516.png" alt="" srcset="" style="max-width: 80%;">
+    </main>
+</body>
+</html>

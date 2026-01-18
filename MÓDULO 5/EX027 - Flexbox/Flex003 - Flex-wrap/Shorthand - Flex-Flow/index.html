@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Flow</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        section{
+            background-color: blueviolet;
+        }
+        /*Flex-wrap: nowrap(Padrão)*/
+        section#container {
+            display: flex;
+            background-color: lightsalmon;
+            /*Shorthand = flex-direction + flex-wrap == flex-flow: row wrap*/
+        }
+        /*Aba Flex-wrap: wrap Flex-wrap: wrap | flex-direction: row*/
+        section#container-row{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        section#container-row-reverse{
+            display: flex;
+            flex-flow: row-reverse wrap;
+        }
+        section#container3{
+            display: flex;
+            flex-flow: row-reverse wrap;
+        }
+        section#container-collum{
+            display: flex;
+            flex-flow: column wrap;
+        }
+        section#container-collum-reverse{
+            display: flex;
+            flex-flow: column-reverse wrap;
+        }
+        /*Aba de Wrap-reverse Row e Row-reverse*/
+        section#container-wrap-reverse-row{
+            display: flex;
+            flex-flow: row wrap-reverse;
+        }
+        section#container-wrap-reverse-row-reverse{
+            display: flex;
+            flex-flow: row-reverse wrap;
+        }
+        /*Aba de Wrap-reverse Collumn e Collumn-reverse*/
+        section#container-wrap-reverse-collum{
+            display: flex;
+            flex-flow: column wrap-reverse;
+        }
+        section#container-wrap-reverse-collum-reverse{
+            display: flex;
+            flex-flow: column-reverse wrap-reverse;
+        }
+        h1{
+            font-size: 1.5em;
+        }
+        div.item{
+            background-color: rgb(0, 191, 255);
+            border: 2px solid black;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 1px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Flex-wrap: nowrap(Padrão)</h1>
+        <section id="container">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </section>
+
+        <!--Aba de Wrap-->
+    <h1>Aba Flex-wrap: wrap</h1>
+          <div class="wrap-row-row-reverse">
+              <h2>Flex-wrap: wrap | flex-direction: row</h2>
+                <section id="container-row">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                    <div class="item">E</div>
+                    <div class="item">F</div>
+                    <div class="item">G</div>
+                 <img src="../Captura de tela 2025-09-11 153326.png" width="100%">
+                </section>
+              
+              <h2>Flex-wrap: wrap | flex-direction: row-reverse</h2>
+                <section id="container-row-reverse">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                    <div class="item">E</div>
+                    <div class="item">F</div>
+                    <div class="item">G</div>
+                <img src="../Captura de tela 2025-09-11 153326.png" width="100%">
+                </section>
+          </div>
+
+        <div id="collum-collum-reverse">
+            <h2>Flex-wrap: wrap | flex-direction: collum</h2>
+            <section id="container-collum">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                    <div class="item">E</div>
+                    <div class="item">F</div>
+                    <div class="item">G</div>   
+                <img src="../Captura de tela 2025-09-11 153326.png" width="100%">
+            </section>
+            <br>
+            <h2>Flex-wrap: wrap | flex-direction: collum-reverse</h2>
+            <br>
+            <section id="container-collum-reverse">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                    <div class="item">E</div>
+                    <div class="item">F</div>
+                    <div class="item">G</div>
+                <img src="../Captura de tela 2025-09-11 153326.png" width="100%">
+            </section>
+        </div>
+
+        <!--Aba de Wrap-reverse-->
+        <h1>Aba Flex-wrap: wrap-reverse</h1>
+        <div id="wrap-reverse-row-row-reverse">
+            <h2>Flex-wrap: wrap-reverse | flex-direction: row</h2>
+            <section id="container-wrap-reverse-row">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                    <div class="item">E</div>
+                    <div class="item">F</div>
+                    <div class="item">G</div>
+                <img src="../Captura de tela 2025-10-06 191827.png" width="100%">
+            </section>
+            <h2>Flex-wrap: wrap-reverse | flex-direction: row-reverse</h2>
+            <section id="container-wrap-reverse-row-reverse">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                    <div class="item">E</div>
+                    <div class="item">F</div>
+                    <div class="item">G</div>
+                <img src="../Captura de tela 2025-10-06 191827.png" width="100%">
+            </section>
+        </div>
+            <h2>Flex-wrap: wrap-reverse | flex-direction: collum</h2>
+            <section id="container-wrap-reverse-collum">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                    <div class="item">E</div>
+                    <div class="item">F</div>
+                    <div class="item">G</div>
+                <img src="../Captura de tela 2025-10-06 191827.png" width="100%">
+            </section>
+
+            <h2>Flex-wrap: wrap-reverse | flex-direction: collum-reverse</h2>
+            <section id="container-wrap-reverse-collum-reverse">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                    <div class="item">E</div>
+                    <div class="item">F</div>
+                    <div class="item">G</div>   
+                <img src="../Captura de tela 2025-10-06 191827.png" width="100%">
+            </section>
+    </main>
+</body>
+</html>
