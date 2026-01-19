@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento - Sentido Mai</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        section {
+            display: flex;
+            background-color: lightsalmon;
+            flex-flow: row nowrap;
+        }
+        div.item{
+            background-color: rgb(0, 191, 255);
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+        section#container-flex-start { /*Pai*/
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+        section#container-flex-end { /*Pai*/
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: row;
+        }
+        section#container-center { /*Pai*/
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+        section#container-space-between { /*Pai*/
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        section#container-space-evenly { /*Pai*/
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+        }
+        section#container-space-around { /*Pai*/
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+        section > div.item-around{ 
+            background-color: rgb(0, 191, 255);
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+            border: 20px solid rgb(255, 0, 0);
+        }
+        p{
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>O justify-content é no sentido do main-axis</h1>
+        <h1>justify-content: flex-start (Padrão) | flex-direction: row</h1>
+        <section id="container-row">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </section>
+        <p>
+            o 1 elemento vai ficar grudado no (main-start) e o branco no final (main-end)
+        </p>
+<img src="Imagem/flex-end.png" width="100%">
+    </main>
+    <h2>justify-content: flex-end | flex-direction: row</h2>
+        <section id="container-flex-end">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </section>
+        <p>
+            o ultimo elemento vai ficar grudado no (main-end) e o branco no inicio (main-start)
+        </p>
+        <img src="Imagem/flex-end.png" width="100%">
+    <h2>justify-content: center | flex-direction: row</h2>
+        <section id="container-center">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </section>
+        <p>
+            o center alinha todos os elementos no centro do container no caso do main-axis e os espaços em branco ficam divididos igualmente nas extremidades.
+        </p>
+    <img src="Imagem/Captura de tela 2025-11-10 095105.png" width="100%">
+<h2>justify-content: space-between | flex-direction: row</h2>
+        <section id="container-space-between">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </section>
+        <p>
+            o space-between gruda o 1 elemento no (main-start) e o ultimo no (main-end).
+        </p>
+    <img src="Imagem/space-between.png" width="100%">
+<h2>justify-content: space-evenly | flex-direction: row</h2>
+        <section id="container-space-evenly">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </section>
+        <p>
+            o space-evenly ele não vai grudar nenhum elemento nas extremidades, ele vai colocar o elementos desposto dentro d o elemento de forma que os espaços entre os elementos e as extremidades sejam iguais.
+        </p>
+    <img src="Imagem/space-evenly.png" width="100%">
+<h2>justify-content: space-around | flex-direction: row</h2>
+        <section id="container-space-evenly" style="background-color: green;">
+            <div class="item-around">A</div>
+            <div class="item-around">B</div>
+            <div class="item-around">C</div>
+            <div class="item-around">D</div>
+            <div class="item-around">E</div>
+            <div class="item-around">F</div>
+            <div class="item-around">G</div>
+        </section>
+        <p> 
+            o space-around ele vai pegar o container, vai dividir o espaço em pedaços iguais e vai colocar os elementos no meio desses espaços, ou seja, o espaço entre os elementos será o dobro do espaço entre os elementos e as extremidades do container.
+        </p>
+    <img src="Imagem/space-evenly.png" width="100%">
+    <hr>
+    <h1>Resumo Visual</h1>
+    <img src="Imagem/Captura de tela 2025-09-05 112252.png" width="100%">
+    <img src="Imagem/Captura de tela 2025-09-05 112501.png" width="100%" style="display: block;">
+</body>
+</html>

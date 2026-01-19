@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-items - Flexbox</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section{
+            display: flex;
+            flex-flow: row wrap;
+            height: 200px;
+            background-color: lightsalmon;
+            margin-bottom: 30px;
+        }
+
+        div.item{
+            background-color: rgb(0, 191, 255);
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* ALIGN-ITEMS */
+
+        section#align-start{
+            align-items: flex-start;
+        }
+
+        section#align-end{
+            align-items: flex-end;
+        }
+
+        section#align-center{
+            align-items: center;
+        }
+
+        section#align-stretch{
+            align-items: stretch;
+        }
+        section#baseline{
+             align-items: baseline;
+        }
+        p{
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>align-items atua no eixo transversal (cross-axis)</h1>
+        
+        <h2>align-items: stretch (padrão)</h2>
+        <section id="align-stretch">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </section>
+        <img src="imagens/strench.png" width="100%">
+        <p>
+            Os itens esticam para ocupar toda a altura disponível do container.
+        </p>
+        
+        <hr>
+
+        <h2>align-items: flex-start</h2>
+        <section id="align-start">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </section>
+        <img src="imagens/flex-start.png" width="100%">
+        <p>
+            Os itens ficam alinhados no início do eixo transversal (topo do container).
+        </p>
+
+        <hr>
+        
+        <h2>align-items: flex-end</h2>
+        <section id="align-end">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </section>
+        <img src="imagens/flex-end.png" width="100%">
+        <p>
+            Os itens ficam alinhados no final do eixo transversal (parte de baixo).
+        </p>
+
+        <h2>align-items: center</h2>
+        <section id="align-center">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </section>
+        <p>
+            Os itens ficam centralizados verticalmente dentro do container.
+        </p>
+
+        <h2>align-items: baseline</h2>
+        <section id="baseline">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </section>
+        <p>
+            Ele alinha os itens flexíveis à linha de base do contêiner:
+           o exemplo usa tamanhos de fonte diferentes para demonstrar que os itens flexíveis são alinhados pela linha de base do texto:
+        </p>
+    </main>
+</body>
+</html>
