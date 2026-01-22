@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-items - Flexbox</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section{
+            display: flex;
+            flex-flow: row wrap;
+            height: 200px;
+            background-color: lightsalmon;
+            margin-bottom: 30px;
+        }
+
+        div.item{
+            background-color: rgb(0, 191, 255);
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* ALIGN-ITEMS */
+        section#align-stretch{ /*Padrão*/
+            align-content: stretch;
+        }
+
+        p{
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>Align-items</h1>
+        
+        <h2>align-items: stretch (padrão)</h2>
+        <section id="align-stretch">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </section>
+        <img src="imagens/strench.png" width="100%">
+        <p>
+            Os itens esticam para ocupar toda a altura disponível do container.
+        </p>
+        
+        <hr>
+
+
+    </main>
+</body>
+</html>
