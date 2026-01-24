@@ -1,0 +1,41 @@
+Ah, sim! Isso acontece por causa de como o **Flexbox** trata múltiplas linhas quando você quebra o `flex-wrap`. Vamos detalhar.
+
+Você escreveu:
+
+```css
+align-items: flex-start;
+```
+
+Isso significa: *alinhamento de cada **linha individual** no cross-axis (geralmente vertical) para o início do container*.
+
+O detalhe importante é:
+
+1. **`align-items` afeta apenas itens dentro da mesma linha do flex container.**
+   Ou seja, se você tem uma linha que "quebrou", cada linha age como um bloco independente no cross-axis.
+
+2. **Quando você quebra a linha (`flex-wrap: wrap`), cada linha se comporta separadamente.**
+   Então, itens da segunda linha não “sobem” para se alinhar com os da primeira linha. Eles vão alinhar ao **início da sua própria linha**, mas isso pode parecer desalinhado se as linhas têm alturas diferentes.
+
+Se você quer que **todas as linhas fiquem alinhadas ao cross-start do container**, você precisa usar:
+
+```css
+align-content: flex-start; 
+```
+
+* `align-content` controla **o alinhamento das linhas inteiras** no cross-axis quando há mais de uma linha.
+* `align-items` controla **cada item dentro da linha**.
+
+Então o CSS completo ficaria algo como:
+
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;   /* itens dentro de cada linha */
+  align-content: flex-start; /* linhas dentro do container */
+}
+```
+
+Isso vai garantir que **todas as linhas quebradas fiquem no cross-start**, e os elementos não fiquem "soltos" no meio do container.
+
+Se você quiser, posso fazer um **diagrama visual explicando a diferença entre `align-items` e `align-content`**, que ajuda muito a entender. Quer que eu faça?

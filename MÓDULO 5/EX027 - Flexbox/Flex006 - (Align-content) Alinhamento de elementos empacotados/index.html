@@ -9,52 +9,228 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
-
         section{
             display: flex;
             flex-flow: row wrap;
-            height: 200px;
+            height: 400px;
             background-color: lightsalmon;
             margin-bottom: 30px;
+        }
+        section#align-stretch{
+            align-content: stretch;
+        }
+
+        section#align-start{
+            align-content: flex-start;
+        }
+
+        section#align-end{
+            align-content: flex-end;
+        }
+
+        section#align-center{
+            align-content: center;
+        }
+
+        section#align-space-between{
+            align-content: space-between;
+        }
+        section#align-space-evenly{
+            align-content: space-evenly;
+        }
+        section#align-space-around{
+            align-content: space-around;
         }
 
         div.item{
             background-color: rgb(0, 191, 255);
             border: 1px solid black;
-            padding: 20px;
+            padding: 40px;
             text-align: center;
         }
-
-        /* ALIGN-ITEMS */
-        section#align-stretch{ /*Padrão*/
-            align-content: stretch;
-        }
-
         p{
             margin-bottom: 40px;
+        }
+        .exemplo {
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+            height: 200px;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+        .item-exemplo {
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 50px;
+            margin: 2px;
         }
     </style>
 </head>
 
 <body>
 
-    <main>
-        <h1>Align-items</h1>
-        
-        <h2>align-items: stretch (padrão)</h2>
-        <section id="align-stretch">
-            <div class="item">A</div>
-            <div class="item">B</div>
-            <div class="item">C</div>
-        </section>
-        <img src="imagens/strench.png" width="100%">
-        <p>
-            Os itens esticam para ocupar toda a altura disponível do container.
-        </p>
-        
-        <hr>
+<main>
+    <h1>Align-content</h1>
 
+    <h2>align-content: stretch (padrão)</h2>
+    <section id="align-stretch">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </section>
+    <img src="imagens/strench.png" width="100%">
+    <p>
+        Os itens esticam para ocupar toda a altura disponível do container.
+    </p>
 
-    </main>
+    <h2>align-content: flex-start</h2>
+    <section id="align-start">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </section>
+    <img src="imagens/start.png" width="100%">
+    <p>
+        Os elementos ficam grudados no início do eixo cruzado. Diferente do align-items, o align-content atua após o quebra de linha das linhas flexíveis.
+    </p>
+
+    <h2>align-content: flex-end</h2>
+    <section id="align-end">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </section>
+    <img src="imagens/end.png" width="100%">
+    <p>
+        Os elementos ficam alinhados no final do eixo cruzado.
+    </p>
+
+    <h2>align-content: center</h2>
+    <section id="align-center">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </section>
+    <img src="imagens/center.png" width="100%">
+    <p>
+        As linhas flexíveis ficam centralizadas no container.
+    </p>
+
+    <h2>align-content: space-between</h2>
+    <section id="align-space-between">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </section>
+    <img src="imagens/space-between.png" width="100%">
+    <p>
+        Espaço igual entre as linhas flexíveis, sem espaço nas extremidades.
+    </p>
+    <h2>align-content: space-evenly</h2>
+    <section id="align-space-evenly">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </section>
+    <img src="imagens/space-evenly.png" width="100%">
+    <p>
+        As linhas flexíveis ficam distribuídas com espaçamento igual entre elas e nas extremidades.
+    </p>
+    <h2>align-content: space-around</h2>
+    <section id="align-space-around">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </section>
+    <img src="imagens/space-around.png" width="100%">
+    <p>
+        Espaço igual entre linhas flexíveis e metade do espaço nas extremidades.
+    </p>
+
+        <h1>Mas por que não usamos o <code>align-items</code> ao invés do <code>align-content</code>?</h1>
+
+    <p>
+    O <code>align-items</code> e o <code>align-content</code> parecem semelhantes, mas têm papéis diferentes no Flexbox:
+    </p>
+
+    <ul>
+        <li><strong>align-items:</strong> Alinha <em>cada item individual</em> dentro da linha flexível no eixo cruzado (vertical se for row).</li>
+        <li><strong>align-content:</strong> Alinha <em>todas as linhas flexíveis</em> dentro do container quando existe mais de uma linha (ou seja, quando os itens quebram).</li>
+    </ul>
+
+    <p>
+    Resumindo: <code>align-items</code> age nos itens de <strong>uma linha</strong>. <code>align-content</code> age nas <strong>linhas</strong> quando há várias.
+    </p>
+
+    <h2>Exemplo prático</h2>
+
+    <h3>Usando <code>align-items</code></h3>
+    <div class="exemplo" style="align-items: flex-end;">
+        <div class="item-exemplo">A</div>
+        <div class="item-exemplo">B</div>
+        <div class="item-exemplo">C</div>
+        <div class="item-exemplo">D</div>
+        <div class="item-exemplo">E</div>
+    </div>
+    <p>
+    Aqui, todos os <strong>itens individuais</strong> são alinhados ao final da linha. Mas se houver várias linhas, elas <em>não se movem juntas</em> — cada linha é independente.
+    </p>
+
+    <h3>Usando <code>align-content</code></h3>
+    <div class="exemplo" style="align-content: flex-end;">
+        <div class="item-exemplo">A</div>
+        <div class="item-exemplo">B</div>
+        <div class="item-exemplo">C</div>
+        <div class="item-exemplo">D</div>
+        <div class="item-exemplo">E</div>
+    </div>
+    <p>
+    Aqui, o <strong>conjunto de linhas</strong> é alinhado ao final do container. Ou seja, todas as linhas se movem juntas, mostrando o efeito correto quando há várias linhas.
+    </p>
+
+    <h3>Resumo visual</h3>
+    <ul>
+        <li><strong>align-items:</strong> controla a posição dos itens dentro de cada linha.</li>
+        <li><strong>align-content:</strong> controla a posição de todas as linhas dentro do container.</li>
+    </ul>
+
+    <p>
+    Portanto, <code>align-items</code> não substitui <code>align-content</code> quando você quer alinhar o bloco inteiro de linhas flexíveis.
+    </p>
+
+</main>
+
 </body>
 </html>
