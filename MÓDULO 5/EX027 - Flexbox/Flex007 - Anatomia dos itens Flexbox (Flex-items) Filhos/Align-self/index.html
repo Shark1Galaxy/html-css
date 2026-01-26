@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - align-self</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff;
+        }
+
+        /* CONTAINER GERAL (mostra todos de uma vez) */
+        #container {
+            display: flex;
+            flex-flow: row wrap;
+            height: 300px;
+            background-color: rgb(253, 213, 102);
+            align-items: flex-start;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+
+        /* CONTAINERS INDIVIDUAIS */
+        .container-demo {
+            display: flex;
+            flex-flow: row wrap;
+            height: 200px;
+            background-color: rgb(253, 213, 102);
+            align-items: flex-start;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* ITENS */
+        .item {
+            background-color: rgb(0, 191, 255);
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+            margin-right: 5px;
+        }
+
+        /* align-self – container geral */
+        #i2 { align-self: inherit; }
+        #i3 { align-self: auto; }
+        #i4 { align-self: flex-start; }
+        #i5 { align-self: flex-end; }
+        #i6 { align-self: stretch; }
+        #i7 { align-self: center; }
+
+        /* align-self – demos individuais */
+        .inherit  { align-self: inherit; }
+        .auto     { align-self: auto; }
+        .start    { align-self: flex-start; }
+        .end      { align-self: flex-end; }
+        .center   { align-self: center; }
+        .stretch  { align-self: stretch; }
+    </style>
+</head>
+
+<body>
+<main>
+
+    <!-- MOSTRA TODOS OS ALIGN-SELF DE UMA VEZ -->
+    <h1>Todos os align-self juntos</h1>
+    <img src="img/Captura de tela 2025-09-11 140734.png" width="100%">
+    <p>
+    A propriedade <code>align-self</code> é usada em itens flex (filhos) para
+    definir o alinhamento individual de um elemento no eixo transversal
+    (cross-axis). Ela permite sobrescrever o valor definido pelo
+    <code>align-items</code> do container, controlando o posicionamento de
+    cada item separadamente.</p>
+
+    <section id="container">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B<br><small>inherit</small></div>
+        <div class="item" id="i3">C<br><small>auto</small></div>
+        <div class="item" id="i4">D<br><small>flex-start</small></div>
+        <div class="item" id="i5">E<br><small>flex-end</small></div>
+        <div class="item" id="i6">F<br><small>stretch</small></div>
+        <div class="item" id="i7">G<br><small>center</small></div>
+    </section>
+
+    <!-- EXEMPLOS INDIVIDUAIS -->
+    <h1>align-self: inherit</h1>
+    <section class="container-demo">
+        <div class="item">A</div>
+        <div class="item inherit">B</div>
+        <div class="item">C</div>
+    </section>
+    <img src="img/inherit.png" width="100%">
+    <p>O item herda o alinhamento definido pelo align-items do container.</p>
+
+    <h1>align-self: auto (Padrão)</h1>
+    <section class="container-demo">
+        <div class="item">A</div>
+        <div class="item auto">B</div>
+        <div class="item">C</div>
+    </section>
+    <img src="img/auto.png" width="100%">
+    <p>Valor padrão. Segue o alinhamento do container pai.</p>
+
+    <h1>align-self: flex-start</h1>
+    <section class="container-demo">
+        <div class="item">A</div>
+        <div class="item start">B</div>
+        <div class="item">C</div>
+    </section>
+     <img src="img/flex-start.png" width="100%">
+    <p>Alinha o item no início do eixo transversal.</p>
+
+    <h1>align-self: flex-end</h1>
+    <section class="container-demo">
+        <div class="item">A</div>
+        <div class="item end">B</div>
+        <div class="item">C</div>
+    </section>
+    <img src="img/flex-end.png" width="100%">
+    <p>Alinha o item no final do eixo transversal.</p>
+
+    <h1>align-self: center</h1>
+    <section class="container-demo">
+        <div class="item">A</div>
+        <div class="item center">B</div>
+        <div class="item">C</div>
+    </section>
+    <img src="img/center.png" width="100%">
+    <p>Centraliza o item no eixo transversal.</p>
+
+    <h1>align-self: stretch</h1>
+    <section class="container-demo">
+        <div class="item">A</div>
+        <div class="item stretch">B</div>
+        <div class="item">C</div>
+    </section>
+    <img src="img/stretch.png" width="100%">
+    <p>O item ocupa toda a altura disponível do container.</p>
+</main>
+</body>
+</html>

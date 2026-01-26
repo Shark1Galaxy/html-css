@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX: AUTO</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: rgb(255, 255, 255);
+        }
+        section#container { /*Pai*/
+            display: flex;
+            background-color: rgb(255, 0, 0);
+            flex-flow: row wrap;
+            width: 100%;
+        }
+        div.item{ /*Filho não se da display:flex*/
+            background-color: rgb(0, 191, 255);
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+            margin: auto;
+        }
+        #i1{
+            order: 1;
+        }
+        #i2{
+            order: 2;
+        }
+        #i3{
+            order: 4;
+        }
+        #i4{
+            order: 5;
+        }
+        #i5 {
+            order: 6;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="container">
+            <div class="item" id="i1">1</div>
+            <div class="item" id="i2">2</div>
+            <div class="item" id="i3">3</div>
+            <div class="item" id="i4">4</div>
+            <div class="item" id="i5">5</div>
+            <div class="item" id="i6">6</div>
+            <div class="item" id="i7">7</div>
+            <div class="item" id="i8">8</div>
+            <div class="item" id="i9">9</div>
+            <div class="item" id="i10">10</div>
+        </section>
+            <img src="image.png" width="100%" style="margin-top: 50px;">
+    </main>
+</body>
+</html>
