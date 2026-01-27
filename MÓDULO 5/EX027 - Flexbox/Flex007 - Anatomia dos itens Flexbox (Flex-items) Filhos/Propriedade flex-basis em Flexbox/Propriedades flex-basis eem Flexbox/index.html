@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX: AUTO</title>
+    <style>
+        section#container { /*Pai*/
+            display: flex;
+            flex-flow: row wrap;
+            background-color: rgb(255, 0, 0);       
+         }
+        div.item{ /*Filho não se da display:flex*/
+            background-color: rgb(0, 191, 255);
+            border: 2px solid black;
+            text-align: center; /*Centralizar os items dentro da caixa(elemento)*/
+            /*flex-basis: auto; Com auto(padrão): o tamanho do elemento a caixa(conteudo), é ditada atraves do tamanhado do que tem dentro da caixa(elemento)*/
+            flex-basis: 150px; /*Quando vc pode o tamanho, ele vai "fixar" a caixa(conteudi), no tamanho setado, no caso a cima é 1em(16px), mas ele vai tentar manter, até onde da, por que como é flexivel, ele vai quebrar*/
+             ;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="container">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">Conteudo maior ainda</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">Conteudo mairo ainda, qeu vai ocupar mais o espaço</div>
+            <div class="item">G</div>
+        </section>
+        <img src="" alt="">
+    </main>
+</body>
+</html>
