@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,9 +29,15 @@
             flex-basis: 150px;
             padding: 9px; 
         }
+        /* flex-grow: controla o quanto cresce (0, 1, 2, 3, 4...) - x
+        flex-shrink: controla se pode encolher (0 = não, 1 = sim) */
         div#A{flex-grow: 0; flex-shrink: 1;}
         div#B{flex-grow: 2; flex-shrink: 0;}
         div#C{flex-grow: 1; flex-shrink: 2;}
+
+        
+        div#EA{flex-grow: 1; flex-shrink: 0;}
+
     </style>
 </head>
 <body>
@@ -49,7 +55,11 @@
             <div class="item" id="B">B</div>
             <div class="item" id="C">C</div>
         </section>
-        <img src="Imagens/image.png" width="100%">
+        <section id="container">
+            <div class="item" id="EA">A</div>
+            <div class="item" id="EA">B</div>
+            <div class="item" id="EA">C</div>
+        </section>
     </main>
 </body>
 </html>

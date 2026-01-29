@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX: AUTO</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        section#container { /*Pai*/
+            display: flex;
+            flex-flow: row nowrap;
+            background-color: lightsalmon;       
+         }
+        div.item{ /*Filho não se da display:flex*/
+            background-color: rgb(0, 191, 255);
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div.item{ /*Filho não se da display:flex*/
+            background-color: rgb(0, 191, 255);
+            border: 1px solid black;
+            text-align: center;
+            padding: 9px; 
+        }
+        /* flex-grow: controla o quanto cresce (0, 1, 2, 3, 4...) - x
+        flex-shrink: controla se pode encolher (0 = não, 1 = sim) */
+        div#A{flex: 0 1 150px} /*flex-grow: 0; flex-shrink: 1; flex-basis: 150px*/
+        div#B{flex: 2 0 150px}/*flex-grow: 2; flex-shrink: 0; flex-basis: 150px*/
+        div#C{flex: 1 2 150px} /*flex-grow: 1; flex-shrink: 2; flex-basis: 150px*/
+
+        div{flex: 0 1 auto} /*flex-grow: 0; flex-shrink: 1; flex-basis: auto;*/
+        div{flex: initial} /*Isso é a mesma coisa de dizer (flex-grow: 0; flex-shrink: 1; flex-basis: auto;)*/
+        /* 
+        flex: 0 1 auto é o comportamento padrão do Flexbox.
+        Por padrão: grow = 0, shrink = 1 e basis = auto.
+        Ou seja, se não declarar nada, esse já é o valor aplicado.
+        flex: initial é equivalente a flex: 0 1 auto.
+        */
+
+        /*Caixa nada flexivel*/
+        div{flex: 0 0 auto}; /*flex-grow: 0; flex-shrink: 0; flex-basis: auto;*/
+        div{flex: none}; /*Isso é a mesma coisa de dizer (flex-grow: 0; flex-shrink: 0; flex-basis: auto;)*/
+        /*
+        flex: 0 0 auto deixa o item totalmente não flexível.
+        Ele não cresce (grow = 0), não diminui (shrink = 0)
+        e o tamanho depende apenas do conteúdo (basis = auto).
+        É o comportamento mais rígido do Flexbox.
+        flex: none é equivalente a flex: 0 0 auto.
+        */
+
+        /*Flex auto - totalmente flexivel*/
+        div{flex: 1 1 auto;} /*flex-grow: 1; flex-shrink: 1; flex-basis: auto;*/
+        div{flex: auto;} /*Isso é a mesma coisa de dizer (flex-grow: 1; flex-shrink: 1; flex-basis: auto;)*/
+
+        /*
+        flex: 1 1 auto dá o máximo de flexibilidade ao item.
+        Ele pode crescer (grow = 1) e diminuir (shrink = 1) livremente,
+        e o limite de crescimento e redução é o tamanho natural do conteúdo (basis = auto).
+        É o oposto de flex: 0 0 auto.
+        flex: auto é equivalente a flex: 1 1 auto.
+        */
+        
+        /*Valores indivuidais*/
+        div{flex: 3} /*flex-grow: 3; flex-shrink: 1; flex-basis: auto;*/
+        /*
+        Quando usamos apenas um valor no flex (ex: flex: 1, flex: 2, flex: 3),
+        esse valor se refere apenas ao flex-grow.
+        Os outros valores assumem os padrões:
+        flex-shrink = 1 e flex-basis = auto.
+
+        Exemplo:
+        flex: 3  ≡  flex: 3 1 auto
+        flex: 1  ≡  flex: 1 1 auto
+        */
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Flex (shorthand)</h1>
+        <img src="image.png" width="100%">
+        <section id="container">
+            <div class="item" id="A">A</div>
+            <div class="item" id="B">B</div>
+            <div class="item" id="C">C</div>
+        </section>
+    </main>
+</body>
+</html>
