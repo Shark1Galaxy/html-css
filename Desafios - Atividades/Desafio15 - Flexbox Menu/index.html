@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu FLexbox</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <div id="icon"><span class="material-symbols-outlined">menu</span></div>
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+                <li><a href="#">Opção 6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Teste de Flexbox</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsa doloremque incidunt sed ab omnis provident ullam sit, libero obcaecati! Laudantium odio, numquam quo vel blanditiis eligendi odit impedit tenetur. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt saepe provident est placeat recusandae veniam fugit voluptate, eos ab ullam optio ratione, exercitationem accusantium porro nesciunt commodi, vitae maxime vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsa doloremque incidunt sed ab omnis provident ullam sit, libero obcaecati! Laudantium odio, numquam quo vel blanditiis eligendi odit impedit tenetur. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt saepe provident est placeat recusandae veniam fugit voluptate, eos ab ullam optio ratione, exercitationem accusantium porro nesciunt commodi, vitae maxime vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsa doloremque incidunt sed ab omnis provident ullam sit, libero obcaecati! Laudantium odio, numquam quo vel blanditiis eligendi odit impedit tenetur. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt saepe provident est placeat recusandae veniam fugit voluptate, eos ab ullam optio ratione, exercitationem accusantium porro nesciunt commodi, vitae maxime vero.vLorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsa doloremque incidunt sed ab omnis provident ullam sit, libero obcaecati! Laudantium odio, numquam quo vel blanditiis eligendi odit impedit tenetur. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt saepe provident est placeat recusandae veniam fugit voluptate, eos ab ullam optio ratione, exercitationem accusantium porro nesciunt commodi, vitae maxime vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsa doloremque incidunt sed ab omnis provident ullam sit, libero obcaecati! Laudantium odio, numquam quo vel blanditiis eligendi odit impedit tenetur. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt saepe provident est placeat recusandae veniam fugit voluptate, eos ab ullam optio ratione, exercitationem accusantium porro nesciunt commodi, vitae maxime vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsa doloremque incidunt sed ab omnis provident ullam sit, libero obcaecati! Laudantium odio, numquam quo vel blanditiis eligendi odit impedit tenetur. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt saepe provident est placeat recusandae veniam fugit voluptate, eos ab ullam optio ratione, exercitationem accusantium porro nesciunt commodi, vitae maxime vero.</p>
+        </article>
+    </main>
+    <script>
+        const menuClick = document.querySelector('div#icon');
+        const menu = document.querySelector('ul');
+
+
+        menuClick.addEventListener('click', () => {
+        menu.style.display === 'block'
+            ? menu.style.display = 'none'
+            : menu.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
