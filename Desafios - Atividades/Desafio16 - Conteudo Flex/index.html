@@ -7,29 +7,35 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header>
+    <header class="normal">
             <h1>Exemplo de Contéudo Flexivel</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cupiditate veniam optio harum veritatis libero doloribus corporis maxime, accusantium atque aspernatur similique, repellat, debitis corrupti beatae quod voluptatibus hic impedit!</p>
     </header>
     <main>
-        <article>
-            <section id="section1">
-                <h2>Elemento Media-> Text</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus cum, et commodi officiis dolor optio blanditiis odit! Obcaecati quae veniam, ex impedit nam provident earum harum itaque, magnam nostrum voluptas.</p>
-                <picture>
-                    <img src="img/image.png" alt="Imagem ilustrativa">
-                </picture>
-            </section>
-            <section id="section2">
-                <h2>Elemento Text-> Media</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus ipsum, velit reprehenderit harum illum nobis suscipit repellat assumenda vel accusantium ex odio sunt, reiciendis nemo atque nam. Voluptatum, dolore at.</p>
-                <div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/VBGMnFHRqcY?si=Ugo1j3jpiTNJgoKK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-            </section>
-        </article>
-    </main>
-        <footer>
-            <h1>Conteudo Normal</h1>
+        <section class="flex-content">
+            <article class="media-text">
+                <div class="text">
+                    <h2>Elemento Media -> Text</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet saepe dolorum ex excepturi numquam perferendis, ratione reprehenderit facere quos accusamus consectetur? Nobis porro aspernatur quos consequatur pariatur nulla odit quidem. strict-origin-when-cross-origin</p>
+                </div>
+                <div class="media">
+                    <img src="FEITO POR MIM/img/image.png" alt="">
+                </div>
+            </article>
+            <article class="text-media">
+                <div class="text">
+                    <h2>Elemento Text -> Media</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repudiandae quae sit quibusdam cupiditate laudantium illo doloribus voluptatem ducimus asperiores quam corrupti aut, ipsam neque eligendi amet possimus maiores aperiam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo beatae nostrum, ipsa accusantium omnis, asperiores in est magnam fugit officiis repellendus perferendis quasi tempora sint officia! Voluptas perferendis eos esse!</p>
+                </div>
+                <div class="media">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VBGMnFHRqcY?si=Ugo1j3jpiTNJgoKK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </article>
+        </section>
+        <section class="normal">
+            <h2>Conteudo Normal</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus animi aliquid neque perferendis minima non est exercitationem corporis at fugiat, modi esse architecto consequatur, culpa quae iste sed obcaecati harum.</p>
-        </footer>
+        </section>
+    </main>
 </body>
 </html>
